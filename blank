@@ -1,0 +1,35 @@
+        # from Tkinter import *
+        #
+        # master = Tk()
+        #
+        # w = Canvas(master, width=200, height=100)
+        # w.pack()
+        #
+        # w.create_line(0, 0, 200, 100)
+        # w.create_line(0, 100, 200, 0, fill="red", dash=(4, 4))
+        #
+        # w.create_rectangle(50, 25, 150, 75, fill="blue")
+        #
+        # mainloop()
+        # self.myCanvas.itemconfigure(item_id, coords=(x1_new, y1_new, x2_new, y2_new))
+
+        from Tkinter import *
+
+        root = Tk()
+
+        def key(event):
+            print "pressed", repr(event.char)
+
+        def callback(event):
+            frame.focus_set()
+            print "clicked at", event.x, event.y
+
+        frame = Frame(root, width=100, height=100)
+        frame.bind("<Key>", key)
+        frame.bind("<Button-1>", callback)
+        frame.pack()
+
+root.mainloop()
+
+w.focus_set()
+w.bind(<Key>, callback)
