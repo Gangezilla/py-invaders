@@ -20,16 +20,11 @@ class Player:
         current_x = self.get_x_position()
         if 0 <= current_x <= 800:
             self.set_x_position(current_x + self.move_rate)
-            print('moving right', current_x)
 
     def move_left(self):
         current_x = self.get_x_position()
         if 0 <= current_x <= 8000:
             self.set_x_position(current_x - self.move_rate)
-            print('moving left', self.get_x_position())
-
-    def shoot(self):
-        print('shoot')
 
     def set_id(self, id):
         self.id = id
